@@ -6,6 +6,7 @@ Templates and Scripts for quick CentOS 8 LAMP server setup
 download scripts
 
 sudo curl -LJO https://github.com/sfalpha/centos8_lamp_quickstart/raw/master/centos8_setup_default.sh
+
 sudo curl -LJO https://github.com/sfalpha/centos8_lamp_quickstart/raw/master/etc_template.tar
 
 run
