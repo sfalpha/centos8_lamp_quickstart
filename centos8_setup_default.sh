@@ -40,7 +40,15 @@ systemctl enable httpd
 systemctl enable php-fpm
 
 echo "Initizize apache self sign cert"
-systemctl start httpd-init
+FQDN="$(hostname)"
+sscg -q                                                             \
+     --cert-file           /etc/pki/tls/certs/localhost.crt         \
+     --cert-key-file       /etc/pki/tls/private/localhost.key       \
+     --ca-file             /etc/pki/tls/certs/localhost.crt         \
+     --lifetime            365                                      \
+     --hostname            $FQDN                                    \
+     --email               root@$FQDN
+
 
 echo "setup finished"
 echo ""
