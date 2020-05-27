@@ -21,6 +21,8 @@ sudo curl -LJO https://github.com/sfalpha/centos8_lamp_quickstart/raw/master/sit
 
 create mysql admin/root password file /root/.mariadb-password in format user:password
 
+## prepare mysql admin/root password file
+
 sudo 'echo "MYSQLROOTUSER:MYSQLROOTPASS" > /root/.mariadb-password'
 
 ## run
